@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0; /* IMPORTANTE */
+  @apply bg-neutral-950 text-gray-200;
+}

@@ -1,0 +1,28 @@
+.
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── project-structure.txt
+├── public
+│   └── vite.svg
+├── README.md
+├── src
+│   ├── App.css
+│   ├── App.tsx
+│   ├── assets
+│   │   └── react.svg
+│   ├── components
+│   │   ├── commons
+│   │   └── Sidebar
+│   │       └── index.tsx
+│   ├── index.css
+│   ├── Layout
+│   │   └── index.tsx
+│   └── main.tsx
+├── tsconfig.app.json
+├── tsconfig.json
+├── tsconfig.node.json
+└── vite.config.ts
+
+8 directories, 18 files

@@ -79,6 +79,22 @@ yarn build
 
 The build output will be in the `dist/` directory.
 
+## Backend Setup
+
+This project requires a backend service to be running. Please follow these steps to set up the backend:
+
+1. Clone the backend repository:
+   ```bash
+   git clone https://github.com/y0h3r/drag-and-drop-be
+   ```
+2. Navigate to the backend directory:
+   ```bash
+   cd drag-and-drop-be
+   ```
+3. Follow the instructions in the backend repository's README to install dependencies and start the server.
+
+Ensure the backend is running before starting the frontend application.
+
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests.

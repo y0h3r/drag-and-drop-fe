@@ -95,6 +95,20 @@ This project requires a backend service to be running. Please follow these steps
 
 Ensure the backend is running before starting the frontend application.
 
+## Limitations and Future Improvements
+
+Due to time constraints, the following aspects of the project were not fully implemented or optimized:
+
+- **State Management**: The current state management approach is not ideal and could be improved for better scalability and maintainability.
+- **Service Layer**: The service layer lacks proper abstraction and could benefit from a more structured implementation.
+- **Component Logic**: Some components contain business logic, making them less reusable and harder to test.
+- **Unit Testing**: No unit tests were implemented, which limits the ability to ensure code reliability and prevent regressions.
+- **Authentication**: The application does not include any form of authentication.
+- **Environment Variables**: Support for environment variables was not added, which would improve configuration management.
+- **Custom Hooks**: The project could benefit from custom hooks to encapsulate and reuse logic across components.
+
+These improvements are planned for future iterations to enhance the overall quality and maintainability of the application.
+
 ## Contributing
 
 Contributions are welcome! Feel free to open issues or submit pull requests.

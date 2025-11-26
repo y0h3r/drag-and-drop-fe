@@ -2,7 +2,7 @@ import type { File as FileType } from "../types/file";
 import type { Folder } from "../types/folder";
 import axios from "axios";
 
-const API_BASE = "/api/v1";
+const API_BASE = "https://drag-and-drop-be.onrender.com/api/v1";
 
 // --------------------- FOLDERS ---------------------
 

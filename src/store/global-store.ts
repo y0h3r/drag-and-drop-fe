@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import * as folderService from "../services/service-api";
 import type { Folder } from "../types/folder";
-import type { File } from "../types/file";
+import type { File as FileType } from "../types/file";
 
 interface FolderStore {
   folders: Folder[];
@@ -13,9 +13,9 @@ interface FolderStore {
   addFolder: (name: string, parentId?: number) => Promise<void>;
   updateFolder: (folderId: number, name: string) => Promise<void>;
   deleteFolder: (folderId: number) => Promise<void>;
-  moveFile: (fileId: number, folderId: number) => Promise<void>;
+  moveFile: (fileId: number, folderId: string) => Promise<void>;
 
-  addFile: (folderId: number, file: File | File) => Promise<void>;
+  addFile: (folderId: number, file: File | FileType) => Promise<void>;
   updateFile: (fileId: number, name: string) => Promise<void>;
   deleteFile: (fileId: number) => Promise<void>;
 
@@ -82,9 +82,11 @@ export const useFolderStore = create<FolderStore>((set) => ({
   addFile: async (folderId, file) => {
     set({ loading: true });
     try {
-      await folderService.uploadFile(folderId, file);
-      const folders = await folderService.fetchFolders();
-      set({ folders });
+      if (file instanceof File) {
+        await folderService.uploadFile(folderId, file);
+        const folders = await folderService.fetchFolders();
+        set({ folders });
+      }
     } catch (error) {
       console.error(error);
     } finally {

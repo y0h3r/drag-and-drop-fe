@@ -57,7 +57,7 @@ function App() {
     if (!selectedFolderId) return alert("Select a folder first");
 
     const files = Array.from(e.dataTransfer.files);
-    files.forEach(file => {
+    files.forEach((file: File) => {
       if (file.type === "application/pdf") addFile(selectedFolderId, file);
       else alert("Only PDF files are allowed");
     });
@@ -81,7 +81,7 @@ function App() {
       await moveFolder(draggedFolder, targetFolderId);
     }
     if (draggedFileId) {
-      await moveFile(draggedFileId, targetFolderId);
+      await moveFile(draggedFileId, `${targetFolderId}`);
     }
     setDraggedFolder(null);
     setDraggedFileId(null);
@@ -116,7 +116,7 @@ function App() {
     const files = e.target.files;
     if (!files) return;
 
-    Array.from(files).forEach(file => {
+    Array.from(files).forEach((file: File) => {
       if (file.type === "application/pdf") addFile(selectedFolderId, file);
       else alert("Only PDF files are allowed");
     });

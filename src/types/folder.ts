@@ -1,3 +1,5 @@
+import type { File } from "./file";
+
 export interface Folder {
   id: number;
   name: string;
